@@ -1,13 +1,13 @@
 ﻿// HomeWork_Seminar_03
 
 
-
+/*
 // Task 3
 // Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
 // 3 -> 1, 8, 27
 // 5 -> 1, 8, 27, 64, 125
 
-/*
+
 void CubeNumbers(int N)
 {
     int num = 1;
@@ -20,7 +20,7 @@ void CubeNumbers(int N)
     Console.Write("Input N: ");
     int N = Convert.ToInt32(Console.ReadLine());
     CubeNumbers(N);
- */  
+ */
  
 
 // Вариант со -> в одну строку
@@ -71,7 +71,7 @@ Console.Write("Input z2: ");
 int z2 = Convert.ToInt32(Console.ReadLine());
 
 Console.WriteLine($"Distance between points {(Math.Round(Distance(x1, y1, z1, x2, y2, z2), 3))}");
-
+*/
 //выводит только число метода, выше +текст
 //Console.WriteLine(Math.Round(Distance(x1, y1, z1, x2, y2, z2), 3));
 
@@ -112,34 +112,3 @@ Console.WriteLine("Repeat the entry. This is not a five-digit number");
 */
 
 
-// не работает
-// bool IsFiveDigit(int M)
-// {
-// if(M > 100000) 
-//     {
-//     Console.WriteLine("This number is NOT palindrome");
-//     }
-// else 
-// return M;
-// }
-
-// bool IsPolindrom(int N)
-// {
-//     int num = N;    // пришло
-//     int turn = 0;       // переменная перевернутого числа
-//     while (num > 9)
-//     {
-//         turn = turn + num % 10;
-//         turn = turn * 10;
-//         num = num / 10;
-//     }
-//     turn = turn + num % 10;
-// return N == turn;
-// }
-
-
-// Console.Write("Input a five-digit number: ");
-// int userNum = Convert.ToInt32(Console.ReadLine());
-
- 
-// Console.WriteLine("This number is a palindrome - " + IsPolindrom(userNum));
