@@ -10,29 +10,15 @@
 // 3, 5 -> 243 (3⁵)   
 // 2, 4 -> 16  
 
-//   работает криво
+
+
 /*
-int InputText (string se)
+int InputRequest(string input)
 {
-    System.Console.Write(se);
-    string readInput = Console.ReadLine();
-    int resalt = int.Parse(readInput);
-    return resalt;
+    Console.Write(input);
+    int N = Convert.ToInt32(Console.ReadLine());
+    return N;
 }
-
-
-
-
-int Power(int powerBase, int exponent)
-{
-    int power = 1;
-    for (int i = 0; i < exponent; i++)
-    {
-        power *= powerBase;
-    }
-    return power;
-}
-
 
 
 
@@ -50,15 +36,26 @@ bool ValidateNumber(int number)
 
 
 
-
-int powerBase = InputText("Input a number: ");
-int exponent = InputText("Input a positive Power Number: ");
-
-if (ValidateNumber(exponent))
+int Power(int powerN, int N)
 {
-    System.Console.WriteLine ($"The number {powerBase} to the power of {exponent} is {Power(powerBase, exponent)}");
-} 
+    int power = 1;
+    for (int i = 0; i < N; i++)
+    {
+        power *= powerN;
+    }
+    return power;
+}
+
+
+
+
+int powerN = InputRequest("Input a number: ");
+int N = InputRequest("Input a positive Power Number: ");
+
+if (ValidateNumber(N))
+System.Console.WriteLine ($"The number {powerN} to the power of {N} is {Power(powerN, N)}");
 */
+
 
 
 
@@ -71,14 +68,14 @@ if (ValidateNumber(exponent))
 // 82 -> 10
 // 9012 -> 12
 
-//    Работает, но криво. Важно именно += в строке 78
+
+
 /*
-int InputText(string se)
+int InputRequest(string input)
 {
-    System.Console.WriteLine(se);
-    string readInput = Console.ReadLine();
-    int result = int.Parse(readInput);
-    return result;
+    Console.Write(input);
+    int N = Convert.ToInt32(Console.ReadLine());
+    return N;
 }
 
 
@@ -99,7 +96,7 @@ int SumAllDigit(int number)
 
 
 
-int number = InputText("Input a positive number: ");
+int number = InputRequest("Input a positive number: ");
 System.Console.WriteLine($"The sum of the digits in the number {number} is {SumAllDigit(number)}");
 */
  
@@ -113,15 +110,21 @@ System.Console.WriteLine($"The sum of the digits in the number {number} is {SumA
 // 6, 1, 33 -> [6, 1, 33]
 
 
-/*
-int InputText(string se)
-{
-    System.Console.WriteLine(se);
-    string readInput = Console.ReadLine();
-    int result = int.Parse(readInput);
-    return result;
-}
 
+// int InputText(string se)
+// {
+//     System.Console.WriteLine(se);
+//     string readInput = Console.ReadLine();
+//     int result = int.Parse(readInput);
+//     return result;
+// }
+
+int InputRequest(string input)
+{
+    Console.Write(input);
+    int N = Convert.ToInt32(Console.ReadLine());
+    return N;
+}
 
 
 
@@ -153,10 +156,9 @@ void PrintAr(int[] array)
 
 
 
-int size = InputText ("Input the number of elements in the array: ");
-int minN = InputText ("Input the smallest number of the array: ");
-int maxN = InputText ("Input the largest number of the array: ");
+int size = InputRequest ("Input the number of elements in the array: ");
+int minN = InputRequest ("Input the smallest number of the array: ");
+int maxN = InputRequest ("Input the largest number of the array: ");
 int [] myarray = RandAr(size, minN, maxN);
 
 System.Console.Write($"Array of random numbers of a given range  ->  "); PrintAr(myarray);
-*/
