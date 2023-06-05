@@ -44,7 +44,8 @@ int max = Convert.ToInt32(Console.ReadLine());
 int[] myArray = CreateRandomArray(Length, min, max);      
 WriteArray(myArray);
 int sum = SumEvenNum(myArray);
-Console.WriteLine(sum);
+//Console.WriteLine(sum);
+Console.WriteLine($"Number of even numbers in the array is {sum}");
 */
 
 // Task 36.
@@ -94,9 +95,9 @@ int max = Convert.ToInt32(Console.ReadLine());
 int[] myArray = CreateRandomArray(Length, min, max);      
 WriteArray(myArray);
 int sum = SumEvenNum(myArray);
-Console.WriteLine(sum);
+//Console.WriteLine(sum);
+Console.WriteLine($"Sum of odd index numbers is {sum}");
 */
-
 
 // Task 38.
 // Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементов массива.
@@ -178,3 +179,83 @@ double[] myArray = CreateRandomArray(size);
 WriteArray(myArray);
 */
 // !!!   НЕ ТРОГАТЬ !!!   РАБОТАЕТ ДЛЯ СОЗДАНИЯ МАССИВА ВЕЩЕСТВЕННОГО ЧИСЛА (ЗНАЧЕНИЕ ПОСЛЕ ",")
+
+
+ 
+
+// !!! НЕ РАБОТАЕТ
+/*
+double[,] CreateRandomArray(int size, int minValue, int maxValue)       
+{
+    double[,] array = new double[size];                                                                                                    
+    for (int i = 0; i < size; i++)
+        array[i] = new Random().Next(minValue, maxValue + 1)+new Random().NextDouble();                                  
+        
+          
+    return array;  
+}
+
+Console.Write("Input a length of array: ");
+int size = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input a min possible value: ");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.Write("Input a max possible value: ");
+int max = Convert.ToInt32(Console.ReadLine());
+
+double[,] myArray = CreateRandomArray(size);      
+WriteArray(myArray);
+*/
+// !!! НЕ РАБОТАЕТ
+
+
+
+/*
+double[] CreateRandomArray(int size)       
+{
+    double[] array = new double[size];                                                                                                    
+    for (int i = 0; i < size; i++)                                  
+        array[i] = new Random().NextDouble(); 
+          
+    return array;  
+}
+
+
+
+double[] WriteArray(double[] array)                                        
+{
+    for (int i = 0; i < array.Length; i++)     
+        Console.Write((Math.Round(array[i], 2))+ "; ") ;  
+        Console.WriteLine(); 
+    return array;   
+}
+*/
+
+// double MaxNum(double[] array)                                        
+// {
+//     double max = array[i];
+//     for (int i = 0; i < array.Length; i++) 
+//         if (max > array[i]);   
+//               //Console.Write((Math.Round(array[i], 2))+ "; ") ;  
+//               //Console.WriteLine(); 
+//     return max;   
+// }
+/*
+double[] MaxNum(double[] array)                                        
+{
+    double max = array[i];
+    
+    for (int i = 0; i < array.Length; i++)
+    {        0      2
+        if (max > array[i]);   
+    }       //Console.Write(max) ;  
+            //Console.WriteLine(); 
+    return max;   
+}
+
+Console.Write("Input a length of array: ");
+int size = Convert.ToInt32(Console.ReadLine());
+
+double[] myArray = CreateRandomArray(size);      
+WriteArray(myArray);
+MaxNum(myArray);
+*/
